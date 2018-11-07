@@ -1,6 +1,6 @@
 # STM32F030F4P6-Arduino
 
-THIS IS NOT AN OFFICIAL ARDUINO PROJECT
+THIS IS NOT AN OFFICIAL STM32/ARDUINO PROJECT
 
 <img align="right" src="STM32F030-Dev-Brd.jpg">7 Nov 2018. This is an interim project 
 for getting the STM32F030F4P6 Cortex-M0 "Minimum System Dev" or "Demo" board 
