@@ -122,7 +122,7 @@ The library codes above implicitly use these pins as in variant.h.
 
 ## Regarding Serial: 
 
-in variant.h, we have #define SERIAL_UART_INSTANCE    __0__ -- it could be changed to 1
+in variant.h, we have the line #define SERIAL_UART_INSTANCE    __0__ -- it could be changed to 1
 You MIGHT get HAL Serial module to run (with barely enough flash left for anything else).
 If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
 
