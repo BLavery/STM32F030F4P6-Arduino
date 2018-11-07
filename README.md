@@ -1,5 +1,7 @@
 # STM32F030F4P6-Arduino
 
+THIS IS NOT AN OFFICIAL ARDUINO PROJECT
+
 <img align="right" src="STM32F030-Dev-Brd.jpg">Nov 2018. This is an interim project 
 for getting the "Minimal" or "Demo" board STM32F030F4P6
 up and running on Arduino IDE.  I expect that the STM32duino project should shortly release 
@@ -56,32 +58,56 @@ In its libraries folder, add the 3 libraries supplied here.
 ## Digital pin numbering:
 
   PA0  D0 
+  
   PA1  D1 
+  
   PA2  D2  - 
+  
   PA3  D3  - 
+  
   PA4  D4  - On-board LED
+  
   PA5  D5  - SCK   SCL
+  
   PA6  D6  - MISO  SDA  
+  
   PA7  D7  - MOSI  
+  
   PB1  D8  - SS
+  
   PA9  D9  - TX UART Header
+  
   PA10 D10 - RX UART Header
+  
   PF0   xtal - not for use
+  
   PF1   xtal - not for use
+  
   PA13 D13 - SWDIO  - STlink Header
+  
   PA14 D14 - SWCLK  - STlink header
+  
 
 ## Analog pins:
 
 A0	D15 ~ D0
+
 A1	D16 ~ D1
+
 A2	D17 ~ D2
+
 A3	D18 ~ D3
+
 A4	D19 ~ D4
+
 A5	D20 ~ D5
+
 A6	D21 ~ D6
+
 A7	D22 ~ D7
+
 A8	D23 ~ D8
+
 	
 Serial/I2C/SPI pins listed above are nominal. See file variant.h.
 Suggest use the listed pins if emulating those functions in sketch software.
@@ -92,4 +118,14 @@ The library codes above use these pins.
 in variant.h, we have #define SERIAL_UART_INSTANCE    0 -- it could be changed to 1
 You MIGHT get HAL Serial module to run (with barely flash left for anything else).
 If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
+
+
+The above code for IDE support is NEARLY identical to here:
+    https://github.com/stm32duino/Arduino_Core_STM32/issues/165
+    
+... except for different (more consistent?) PA13 = D13  PA14 = D14, 
+preserving RX and TX where they are marked as such on the end header (PA9, PA10),
+keeping SDA/SCL off the serial header,
+and disabling the HAL Serial code.
+
 
