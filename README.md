@@ -4,7 +4,7 @@ THIS IS NOT AN OFFICIAL ARDUINO PROJECT
 
 <img align="right" src="STM32F030-Dev-Brd.jpg">Nov 2018. This is an interim project 
 for getting the "Minimal" or "Demo" board STM32F030F4P6
-up and running on Arduino IDE.  I expect that the STM32duino project should shortly release 
+up and running on Arduino IDE.  I expect that the STM32duino project may shortly release 
 support for this chip, in which case then use the official version, of course.  Pin numbering might 
 not be identical on the official version.
 
