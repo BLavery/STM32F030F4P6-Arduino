@@ -82,9 +82,9 @@ In its libraries folder, add the 3 libraries supplied here.
   
   PA10 D10 - RX UART Header
   
-  PF0   xtal - not for use
+  D11 - not for use
   
-  PF1   xtal - not for use
+  D12 - not for use
   
   PA13 D13 - SWDIO  - STlink Header
   
