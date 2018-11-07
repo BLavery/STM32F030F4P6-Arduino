@@ -11,12 +11,12 @@
 
 #define TWI_CLOCKSTRETCHLIMIT  230  //usec
 
-#define SDA_LOW()   ({digitalWrite(SDA, LOW) ; pinMode(SDA, OUTPUT);}) //Enable SDA (becomes output and since GPO is 0 for the pin, it will pull the line low)
-#define SDA_HIGH()  (pinMode(SDA, INPUT_PULLUP)) // SDA pulled up
-#define SDA_READ()  ((digitalRead(SDA)) != 0)
-#define SCL_LOW()   ({digitalWrite(SCL, LOW);pinMode(SCL, OUTPUT);})
-#define SCL_HIGH()  (pinMode(SCL, INPUT_PULLUP))
-#define SCL_READ()  ((digitalRead(SCL)) != 0)
+#define SDA_LOW()   ({digitalWrite(TWI_SDA, LOW) ; pinMode(SDA, OUTPUT);}) //Enable SDA (becomes output and since GPO is 0 for the pin, it will pull the line low)
+#define SDA_HIGH()  (pinMode(TWI_SDA, INPUT_PULLUP)) // SDA pulled up
+#define SDA_READ()  ((digitalRead(TWI_SDA)) != 0)
+#define SCL_LOW()   ({digitalWrite(TWI_SCL, LOW);pinMode(SCL, OUTPUT);})
+#define SCL_HIGH()  (pinMode(TWI_SCL, INPUT_PULLUP))
+#define SCL_READ()  ((digitalRead(TWI_SCL)) != 0)
 #define DELAY()     delayMicroseconds(TWI_DCOUNT)
 
 void twi_init(){

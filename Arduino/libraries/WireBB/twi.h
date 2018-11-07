@@ -7,6 +7,9 @@
 extern "C" {
 #endif
 
+#define TWI_SDA  PA6
+#define TWI_SCL  PA5
+
 #define I2C_OK                      0
 #define I2C_SCL_HELD_LOW            1
 #define I2C_SCL_HELD_LOW_AFTER_READ 2
