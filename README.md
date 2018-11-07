@@ -42,8 +42,7 @@ with the F030F4. These libraries are:
 Quality = hacked together, code not even tidied up yet.  But they are working.
 Code size = comfortable in our tiny flash space.
 These libraries were intended for exactly this purpose (arduino ide / STM32F030F4P6)
-and no thought was made to adapting to other purposes (which may be quite practical, though).
-Feel welcome!
+and no thought was made to adapting to other purposes. (Which may be quite practical, though. Feel welcome!)
 
 ## Installation:
 <img align="right" src="P1070121.JPG">
