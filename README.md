@@ -10,6 +10,8 @@ I expect that the STM32duino project may shortly release
 support for this chip, in which case then use the official version, of course.  Pin numbering might 
 not be identical on the official version.
 
+In any case, the library modules in this project should still be valid on an official support version.
+
 ## Programming?
 
 The USB micro connector is for 5V power only, not USB data. The only practical programming method is STLink.
