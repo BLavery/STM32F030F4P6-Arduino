@@ -80,17 +80,17 @@ In its libraries folder, add the 3 libraries supplied here.
   
   PB1  D8  - SS
   
-  PA9  D9  - TX UART Header
+  PA9  D9  - "TX" UART Header
   
-  PA10 D10 - RX UART Header
+  PA10 D10 - "RX" UART Header
   
   D11 - not for use
   
   D12 - not for use
   
-  PA13 D13 - SWDIO  - STlink Header
+  PA13 D13 - SWDIO  - STlink Header "DIO"
   
-  PA14 D14 - SWCLK  - STlink header
+  PA14 D14 - SWCLK  - STlink header "CLK"
   
 
 ## Analog pins:
