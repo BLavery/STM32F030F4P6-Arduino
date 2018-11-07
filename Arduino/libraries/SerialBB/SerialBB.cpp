@@ -19,11 +19,13 @@
 #include "c__buf.h"
 // & DONT instantiate more than 1 serial object. (single circ buffer outside class)
 
+// buffered input is currently not suited to binary data, as chr zero is not handled
+
 SerialBB::SerialBB(void)
 {
-	pinMode(PIN_SERIAL_TX, OUTPUT);	
-	digitalWrite(PIN_SERIAL_TX, HIGH);
-    pinMode(PIN_SERIAL_RX, INPUT);
+	pinMode(PIN_TX, OUTPUT);	
+	digitalWrite(PIN_TX, HIGH);
+    pinMode(PIN_RX, INPUT);
 
 }
 
@@ -32,22 +34,22 @@ SerialBB::SerialBB(void)
 void SerialBB::_putChar(unsigned char data)    // TX one byte
 {
   unsigned long starttime= micros();
-  digitalWrite(PIN_SERIAL_TX, 0);           // make start bit
+  digitalWrite(PIN_TX, 0);           // make start bit
   while (micros()-starttime < BITDELAY) {} ;  
   for (int i=8; i>0; i--)          // 8 serial bits
   {
-    digitalWrite(PIN_SERIAL_TX, data&1);  
+    digitalWrite(PIN_TX, data&1);  
     data = (data >> 1);           
     starttime += BITDELAY;  
     while (micros()-starttime<BITDELAY) {} ;    
   }
-  digitalWrite(PIN_SERIAL_TX, 1);           // dbl stop bit
+  digitalWrite(PIN_TX, 1);           // dbl stop bit
   starttime += BITDELAY;  
   while (micros()-starttime < (BITDELAY*2)) {} ;    
 }
 
 
-void SerialBB::txByte(unsigned char ch, bool lf)             // TX a C char
+void SerialBB::txByte(unsigned char ch, bool lf)             // TX a C byte
 {
 	_putChar(ch);
     if(lf) txStr("\n");
@@ -107,14 +109,14 @@ int SerialBB::getChar(void) // -1: nothing    -2 = stop/start framing error     
 	// raw, unbuffered
 	unsigned long int chr = 0; 
 	unsigned long reftime= micros() - BITDELAY/2;  
-	if (digitalRead(PIN_SERIAL_RX))  // idle
+	if (digitalRead(PIN_RX))  // idle
 	    return -1;
     // falling edge of start bit
 	for (int k=0; k<=9; k++)
 	{
 		while (micros()-reftime < BITDELAY)  
 		    ; // wait   
-		chr |= (digitalRead(PIN_SERIAL_RX) << k);
+		chr |= (digitalRead(PIN_RX) << k);
 		reftime += BITDELAY;
 	}
 	if ((chr & 0b01000000001) != 0b01000000000)  // start & stop bits correct?

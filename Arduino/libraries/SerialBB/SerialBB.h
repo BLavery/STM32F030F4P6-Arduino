@@ -4,7 +4,8 @@
 
 #define BITDELAY  52 
 //  104 9600  baud  52 19200    26  38400 
-
+#define PIN_RX  PA10
+#define PIN_TX  PA9
 
 class SerialBB
 {
