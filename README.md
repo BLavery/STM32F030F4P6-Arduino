@@ -41,14 +41,17 @@ Feel welcome!
 
 ## Installation:
 
-<img align="right" src="P1070121.JPG">1. You must install the STM32 core (official) board support from here:
+<img align="right" src="P1070121.JPG">
+1. You must install the STM32 core (official) board support from here:
    https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls#list-of-3rd-party-boards-support-urls
    If you have an earlier version than 1.4, then upgrade it to 1.4.
    
 2. Find your install location for the STM32 package (mine was /opt/Arduino1.8.5/portable/packages/STM32/hardware/STM32/1.4.0/
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
 you are indeed in the STM32 region.
+
 a. inside the .../variants/ folder, add the DEMO-F030F4 folder from here.
+
 b. in the /1.4.0/ folder, open the boards.txt in an editor, and patch in the GenF030 "excerpt" section 
 
 3. Find your user sketchbook folder ("(documents).../Arduino/" probable, but File/Preferences in your IDE should tell you.
