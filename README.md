@@ -3,19 +3,19 @@
 THIS IS NOT AN OFFICIAL ARDUINO PROJECT
 
 <img align="right" src="STM32F030-Dev-Brd.jpg">Nov 2018. This is an interim project 
-for getting the "Minimal" or "Demo" board STM32F030F4P6
-up and running on Arduino IDE.  I expect that the STM32duino project may shortly release 
+for getting the "Minimum System Dev" or "Demo" board STM32F030F4P6
+up and running on Arduino IDE.  eBay and AliExpress are flooded with these for $2.  I expect that the STM32duino project may shortly release 
 support for this chip, in which case then use the official version, of course.  Pin numbering might 
 not be identical on the official version.
 
 ## Programming?
 
 The USB micro connector is power only, not USB data. The only practical programming method is STLink.
-Get one. Check elsewhere if you need any config/setup help. 
+Get one ($3). Check elsewhere if you need any config/setup help. 
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
 And with STLink, no bootloader is used or needed.
 
-And get a CP210x TTL USB serial adapter while you are at it. You are going to need that for "terminal."
+And get a 3V. TTL USB serial adapter (CP2102/CH340) while you are at it. You are going to need that for "terminal."
 
 ## Libraries Included Here:
 
