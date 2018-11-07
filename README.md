@@ -52,7 +52,7 @@ Feel welcome!
    
 2. Find your install location for the STM32 package (mine on Mint was /opt/Arduino1.8.5/portable/packages/STM32/hardware/STM32/1.4.0/
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
-you are indeed in the STM32 region. On my Windows machine I found the files here:  C:\Users\Brian\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.4.0\
+you are indeed in the STM32 region. On my Windows install I found the files here:  C:\Users\Brian\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.4.0\
 
 a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files.
 
