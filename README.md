@@ -13,7 +13,7 @@ not be identical on the official version.
 ## Programming?
 
 The USB micro connector is for 5V power only, not USB data. The only practical programming method is STLink.
-Get one ($3). Check elsewhere if you need any config/setup help. 
+**Get one** ($3). Check elsewhere if you need any config/setup help. 
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
 And with STLink, no bootloader is used or needed.
 
@@ -24,16 +24,16 @@ And get a 3V TTL USB serial adapter (CP2102/CH340) while you are at it ($1.5). Y
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 9 or 10K. 
 However, #including any of arduino's regular Serial, Wire, SPI, will also add many K each to the build size, breaking the 16K limit.
 The most obvious implication is that we now have no way to "view" any output, even any debug information,
-beyond toggling a LED!  No serial terminal. Not connected at USB connector. 
-Driver software too big to use TX/RX and USB Serial adapter.
+beyond toggling a LED!  No serial terminal. It's not connected at USB connector. 
+And the HAL Driver software is too big, even using TX/RX and USB Serial adapter.
 
-There are three hacked-together arduino libraries included here, so that we can communicate 
+There are three hacked-together arduino libraries included here, so that we **can** communicate 
 with the F030F4, despite HAL Serial and HAL Wire being unavailable. These libraries are:
 
- - SerialBB - a simple software (bit-bang) duplex serial driver, default 19200. 
+ - __SerialBB__ - a simple software (bit-bang) duplex serial driver, default 19200. 
       So a terminal can be used.
- - WireBB - a limited software I2C driver. 1-byte data write only. 
- - oledf103f4 - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using WireBB.
+ - __WireBB__ - a limited software I2C driver. 1-byte data write only. 
+ - __oledf103f4__ - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using WireBB.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
 
 Quality = hacked together, code not even tidied up yet.  But they are working.
@@ -122,7 +122,7 @@ The library codes above implicitly use these pins as in variant.h.
 
 ## Regarding Serial: 
 
-in variant.h, we have #define SERIAL_UART_INSTANCE    0 -- it could be changed to 1
+in variant.h, we have #define SERIAL_UART_INSTANCE    __0__ -- it could be changed to 1
 You MIGHT get HAL Serial module to run (with barely enough flash left for anything else).
 If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
 
