@@ -53,6 +53,7 @@ Feel welcome!
    If you have an earlier version than 1.4, then upgrade it to 1.4.  (1.4 is current as at this date 7 Nov.)
    
    
+
 2. Find your install location for the STM32 package (mine on Mint was /opt/Arduino1.8.5/portable/packages/STM32/hardware/STM32/1.4.0/
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
 you are indeed in the STM32 region. On my Windows install I found the files here:  C:\Users\Brian\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.4.0\
