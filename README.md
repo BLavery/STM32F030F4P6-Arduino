@@ -15,7 +15,7 @@ Get one ($3). Check elsewhere if you need any config/setup help.
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
 And with STLink, no bootloader is used or needed.
 
-And get a 3V. TTL USB serial adapter (CP2102/CH340) while you are at it ($1.5). You are going to need that for "terminal."
+And get a 3V TTL USB serial adapter (CP2102/CH340) while you are at it ($1.5). You are going to need that for "terminal."
 
 ## Libraries Included Here:
 
