@@ -4,7 +4,9 @@ THIS IS NOT AN OFFICIAL ARDUINO PROJECT
 
 <img align="right" src="STM32F030-Dev-Brd.jpg">Nov 2018. This is an interim project 
 for getting the "Minimum System Dev" or "Demo" board STM32F030F4P6
-up and running on Arduino IDE.  eBay and AliExpress are flooded with these for $2.  I expect that the STM32duino project may shortly release 
+up and running on Arduino IDE.  eBay and AliExpress are flooded with these for $2.  This may be a 32-bit chip at 48MHz, but this is the baby of the STM32 line.
+
+I expect that the STM32duino project may shortly release 
 support for this chip, in which case then use the official version, of course.  Pin numbering might 
 not be identical on the official version.
 
