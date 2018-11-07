@@ -25,7 +25,7 @@ Driver software too big to use TX/RX and USB Serial adapter.
 ## Libraries Included Here:
 
 There are three hacked-together arduino libraries included here, so that we can communicate 
-with the F030F4, despite HAL Serial and HAL Wire being unavailable. These are:
+with the F030F4, despite HAL Serial and HAL Wire being unavailable. These libraries are:
 
  - SerialBB - a simple software (bit-bang) duplex serial driver, default 19200. 
       So a terminal can be used.
