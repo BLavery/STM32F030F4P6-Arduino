@@ -128,6 +128,8 @@ If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as use
 
 In the middle pic above showing (clone) STLink and USB Serial adapter, with BOTH CONNECTED AT ONE TIME, I leave off the +3V wire of the USB-Serial device. Otherwise the STM32 board gets 3V supply from 2 sources. Haven't tested it (!), but that sounds like a "BAD IDEA!"
 
+Note the pic shows no USB-micro cnnection to the STM32 board. That would be a THIRD voltage source in this case!
+
 ## Acknowledgement:
 
 The above code for IDE support is NEARLY identical to here:
