@@ -121,7 +121,7 @@ A8	D23 ~ PB1
 	
 Serial/I2C/SPI pins listed above are nominal. See file variant.h.
 Suggest use the listed pins if emulating those functions in sketch software.
-The library codes above implicitly use these pins as in variant.h.
+~The library codes above implicitly use these pins as in variant.h.~
 
 ## Regarding Serial: 
 
