@@ -12,7 +12,7 @@ not be identical on the official version.
 
 ## Programming?
 
-The USB micro connector is power only, not USB data. The only practical programming method is STLink.
+The USB micro connector is for 5C power only, not USB data. The only practical programming method is STLink.
 Get one ($3). Check elsewhere if you need any config/setup help. 
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
 And with STLink, no bootloader is used or needed.
