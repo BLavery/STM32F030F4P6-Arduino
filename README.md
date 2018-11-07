@@ -46,13 +46,14 @@ Feel welcome!
    https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls#list-of-3rd-party-boards-support-urls
    If you have an earlier version than 1.4, then upgrade it to 1.4.
    
+   
 2. Find your install location for the STM32 package (mine on Mint was /opt/Arduino1.8.5/portable/packages/STM32/hardware/STM32/1.4.0/
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
 you are indeed in the STM32 region. On my Windows machine I found the files here:  C:\Users\Brian\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.4.0\
 
-a. inside the .../variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files..
+a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files.
 
-b. in the .../1.4.0/ folder, open the boards.txt in an editor, and patch in the GenF030 "excerpt" section 
+b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patch in the GenF030 "excerpt" section.
 
 3. Find your user sketchbook folder ("(documents).../Arduino/" probably, but File/Preferences in your IDE should tell you.
 In its libraries folder, add the 3 libraries supplied here.
