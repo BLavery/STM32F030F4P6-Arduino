@@ -47,7 +47,7 @@ void SerialBB::_putChar(unsigned char data)    // TX one byte
 }
 
 
-void SerialBB::txByte(unsigned char ch, bool lf)             // TX a C string
+void SerialBB::txByte(unsigned char ch, bool lf)             // TX a C char
 {
 	_putChar(ch);
     if(lf) txStr("\n");
