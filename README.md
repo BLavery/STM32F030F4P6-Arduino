@@ -12,7 +12,8 @@ not be identical on the official version.
 
 The USB micro connector is power only, not USB data. The only practical programming method is STLink.
 Get one. Check elsewhere if you need any setup. 
-Get it running for your scenario, and programming becomes trivially easy thereafter.
+Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
+And with STLink, no bootloader is used or needed.
 
 And get a CP210x TTL USB serial adapter while you are at it. You are going to need that for "terminal."
 
