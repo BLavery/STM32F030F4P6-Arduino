@@ -32,7 +32,7 @@ with the F030F4, despite HAL Serial and HAL Wire being unavailable. These librar
       So a terminal can be used.
  - WireBB - a limited software I2C driver. 1-byte data write only. 
  - oledf103f4 - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using WireBB.
-      So we can see some output. Derived out of Daniel Turton's OzOled project.
+      So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
 
 Quality = hacked together, code not even tidied up yet.  But they are working.
 Code size = comfortable in our tiny flash space.
