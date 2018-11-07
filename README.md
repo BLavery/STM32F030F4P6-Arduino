@@ -116,19 +116,19 @@ A8	D23 ~ D8
 	
 Serial/I2C/SPI pins listed above are nominal. See file variant.h.
 Suggest use the listed pins if emulating those functions in sketch software.
-The library codes above use these pins.
+The library codes above implicitly use these pins as in variant.h.
 
 ## Regarding Serial: 
 
 in variant.h, we have #define SERIAL_UART_INSTANCE    0 -- it could be changed to 1
-You MIGHT get HAL Serial module to run (with barely flash left for anything else).
+You MIGHT get HAL Serial module to run (with barely enough flash left for anything else).
 If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
 
 ## Wiring Hint:
 
 In the second pic above showing (clone) STLink and USB Serial adapter, with BOTH CONNECTED AT ONE TIME, I leave off the +3V wire of the USB-Serial device. Otherwise the STM32 board gets 3V supply from 2 sources. Haven't tested it (!), but that sounds like a "BAD IDEA!"
 
-Note the pic shows no USB-micro cnnection to the STM32 board. That would be a THIRD voltage source in this case! (Although possibly safe.)  The moral: Whatever is your connection configuration, THINK about where your board supply is coming from.
+Note the pic also shows no USB-micro cnnection to the STM32 board. That would be a THIRD voltage source in this case! (Although possibly safe.)  The moral: Whatever is your connection configuration, THINK about where your board supply is coming from.
 
 ## Acknowledgement:
 
