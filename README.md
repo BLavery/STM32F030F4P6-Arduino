@@ -14,7 +14,7 @@ The USB micro connector is power only, not USB data. The only practical programm
 Get one. Check elsewhere if you need any setup. 
 Get it running for your scenario, and programming becomes trivially easy thereafter.
 
-And get a CP210x ttl serial adapter while you are at it. You are going to need that for "terminal."
+And get a CP210x TTL USB serial adapter while you are at it. You are going to need that for "terminal."
 
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 9 or 10K. 
 However, #including any of Serial, Wire, SPI, also adds many K each to the build size, breaking the 16K limit.
