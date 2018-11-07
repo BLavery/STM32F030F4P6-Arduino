@@ -50,7 +50,7 @@ Feel welcome!
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
 you are indeed in the STM32 region.
 
-a. inside the .../variants/ folder, add the DEMO-F030F4 folder from here.
+a. inside the .../variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files..
 
 b. in the .../1.4.0/ folder, open the boards.txt in an editor, and patch in the GenF030 "excerpt" section 
 
