@@ -122,6 +122,7 @@ in variant.h, we have #define SERIAL_UART_INSTANCE    0 -- it could be changed t
 You MIGHT get HAL Serial module to run (with barely flash left for anything else).
 If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
 
+## Acknowledgement:
 
 The above code for IDE support is NEARLY identical to here:
     https://github.com/stm32duino/Arduino_Core_STM32/issues/165
