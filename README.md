@@ -34,7 +34,7 @@ There are three hacked-together lightweight arduino libraries included here, so 
 with the F030F4. These libraries are:
 
  - __SerialBB__ - a simple software (bit-bang) duplex serial driver, default 19200. 
-      So a terminal can be used. TXD/RXD.
+      So a terminal can be used. TXD/RXD ie PA9/PA10.
  - __WireBB__ - a limited software I2C driver. 1-byte data write only. PA5/PA6.
  - __oledf030f4__ - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using WireBB.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
@@ -119,7 +119,7 @@ A7	D22 ~ PA7
 A8	D23 ~ PB1
 
 	
-Serial/I2C/SPI pins listed above are nominal. See file variant.h.
+Serial/I2C/SPI pins listed above are nominal. 
 Suggest use the listed pins if emulating those functions in sketch software.
 ~The library codes above implicitly use these pins as in variant.h.~
 
