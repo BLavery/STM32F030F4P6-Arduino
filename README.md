@@ -122,6 +122,10 @@ in variant.h, we have #define SERIAL_UART_INSTANCE    0 -- it could be changed t
 You MIGHT get HAL Serial module to run (with barely flash left for anything else).
 If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
 
+## Wiring Hint:
+
+In the middle pic above showing (clone) STLink and USB Serial adapter, with BOTH CONNECTED AT ONE TIME, I leave off the +3V wire of the USB-Serial device. Otherwise the STM32 board gets 3V supply from 2 sources. Haven't tested it (!), but that sounds like a "BAD IDEA!"
+
 ## Acknowledgement:
 
 The above code for IDE support is NEARLY identical to here:
