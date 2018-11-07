@@ -19,7 +19,7 @@ And get a CP210x TTL USB serial adapter while you are at it. You are going to ne
 ## Libraries Included Here:
 
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 9 or 10K. 
-However, #including any of Serial, Wire, SPI, also adds many K each to the build size, breaking the 16K limit.
+However, #including any of arduino's regular Serial, Wire, SPI, will also add many K each to the build size, breaking the 16K limit.
 The most obvious implication is that we now have no way to "view" any output, even any debug information,
 beyond toggling a LED!  No serial terminal. Not connected at USB connector. 
 Driver software too big to use TX/RX and USB Serial adapter.
