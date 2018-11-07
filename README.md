@@ -21,7 +21,7 @@ And get a 3V TTL USB serial adapter (CP2102/CH340) while you are at it ($1.5). Y
 
 ## Libraries Included Here:
 
-<img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 9 or 10K. 
+<img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 9K. 
 However, #including any of arduino's regular Serial, Wire, SPI, will also add many K each to the build size, breaking the 16K limit.
 The most obvious implication is that we now have no way to "view" any output, even any debug information,
 beyond toggling a LED!  No serial terminal. It's not connected at USB connector. 
