@@ -97,23 +97,23 @@ In its libraries folder, add the 3 libraries supplied here.
 
 ## Analog pins:
 
-A0	D15 ~ D0
+A0	D15 ~ PA0
 
-A1	D16 ~ D1
+A1	D16 ~ PA1
 
-A2	D17 ~ D2
+A2	D17 ~ PA2
 
-A3	D18 ~ D3
+A3	D18 ~ PA3
 
-A4	D19 ~ D4
+A4	D19 ~ PA4
 
-A5	D20 ~ D5
+A5	D20 ~ PA5
 
-A6	D21 ~ D6
+A6	D21 ~ PA6
 
-A7	D22 ~ D7
+A7	D22 ~ PA7
 
-A8	D23 ~ D8
+A8	D23 ~ PB1
 
 	
 Serial/I2C/SPI pins listed above are nominal. See file variant.h.
