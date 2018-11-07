@@ -1,0 +1,39 @@
+#  INTELLIGENTLY PATCH THE FOLLOWING GenF030 CONTENT INTO boards.txt 
+#  AT START OF "OTHER BOARDS" SECTION
+
+
+
+################################################################################
+# Other boards
+
+###############################
+# Generic F030
+GenF030.name=Generic STM32F030 series
+
+GenF030.build.core=arduino
+GenF030.build.board=GenF030
+GenF030.build.extra_flags=-D{build.product_line} {build.xSerial}
+
+# DEMO_F030F4 board
+# Support: Serial1 (USART1 on PA3, PA2)
+GenF030.menu.pnum.DEMO_F030F4=STM32F030F4 Demo board
+GenF030.menu.pnum.DEMO_F030F4.upload.maximum_data_size=4096
+GenF030.menu.pnum.DEMO_F030F4.upload.maximum_size=16384
+GenF030.menu.pnum.DEMO_F030F4.build.mcu=cortex-m0
+GenF030.menu.pnum.DEMO_F030F4.build.board=DEMO_F030F4
+GenF030.menu.pnum.DEMO_F030F4.build.series=STM32F0xx
+GenF030.menu.pnum.DEMO_F030F4.build.product_line=STM32F030x6
+GenF030.menu.pnum.DEMO_F030F4.build.variant=DEMO_F030F4
+GenF030.menu.pnum.DEMO_F030F4.build.cmsis_lib_gcc=arm_cortexM0l_math
+
+# Upload menu
+GenF030.menu.upload_method.STLinkMethod=STLink
+GenF030.menu.upload_method.STLinkMethod.upload.protocol=STLink
+GenF030.menu.upload_method.STLinkMethod.upload.tool=stlink_upload
+
+GenF030.menu.upload_method.serialMethod=Serial
+GenF030.menu.upload_method.serialMethod.upload.protocol=maple_serial
+GenF030.menu.upload_method.serialMethod.upload.tool=serial_upload
+
+###############################
+# 

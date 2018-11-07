@@ -1,0 +1,37 @@
+Digital pins:
+
+  PA0  D0 
+  PA1  D1 
+  PA2  D2  - 
+  PA3  D3  - 
+  PA4  D4  - On-board LED
+  PA5  D5  - SCK   SCL
+  PA6  D6  - MISO  SDA  
+  PA7  D7  - MOSI  
+  PB1  D8  - SS
+  PA9  D9  - TX UART Header
+  PA10 D10 - RX UART Header
+  PF0   xtal - not for use
+  PF1   xtal - not for use
+  PA13 D13 - SWDIO  - STlink Header
+  PA14 D14 - SWCLK  - STlink header
+
+Analog pins:
+
+A0	D15 ~ D0
+A1	D16 ~ D1
+A2	D17 ~ D2
+A3	D18 ~ D3
+A4	D19 ~ D4
+A5	D20 ~ D5
+A6	D21 ~ D6
+A7	D22 ~ D7
+A8	D23 ~ D8
+	
+Internal HAL Serial, I2C, SPI not useable (not enough flash memory).
+Serial/I2C/SPI pins listed above are nominal. 
+Suggest use same pins if emulating those functions in sketch software.
+
+Regarding Serial: in variant.h, we have #define SERIAL_UART_INSTANCE    0 -- it could be changed to 1
+You MIGHT get HAL Serial module to run (with barely flash left for anything else).
+If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
