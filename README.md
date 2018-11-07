@@ -64,7 +64,7 @@ In its libraries folder, add the 3 libraries supplied here.
 
   PA0  D0 
   
-  PA1  D1 
+  PA1  D1 <img align="right" src="ss66.jpg">
   
   PA2  D2  - 
   
