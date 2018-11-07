@@ -27,8 +27,8 @@ The most obvious implication is that we now have no way to "view" any output, ev
 beyond toggling a LED!  No serial terminal. It's not connected at USB connector. 
 And the HAL Driver software is too big, even using TX/RX and USB Serial adapter.
 
-There are three hacked-together arduino libraries included here, so that we **can** communicate 
-with the F030F4, despite HAL Serial and HAL Wire being unavailable. These libraries are:
+There are three hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
+with the F030F4. These libraries are:
 
  - __SerialBB__ - a simple software (bit-bang) duplex serial driver, default 19200. 
       So a terminal can be used. TXD/RXD.
