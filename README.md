@@ -16,13 +16,13 @@ Get it running for your scenario, and programming becomes trivially easy thereaf
 
 And get a CP210x TTL USB serial adapter while you are at it. You are going to need that for "terminal."
 
+## Libraries Included Here:
+
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 9 or 10K. 
 However, #including any of Serial, Wire, SPI, also adds many K each to the build size, breaking the 16K limit.
 The most obvious implication is that we now have no way to "view" any output, even any debug information,
 beyond toggling a LED!  No serial terminal. Not connected at USB connector. 
 Driver software too big to use TX/RX and USB Serial adapter.
-
-## Libraries Included Here:
 
 There are three hacked-together arduino libraries included here, so that we can communicate 
 with the F030F4, despite HAL Serial and HAL Wire being unavailable. These libraries are:
