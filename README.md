@@ -46,9 +46,9 @@ Feel welcome!
    https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls#list-of-3rd-party-boards-support-urls
    If you have an earlier version than 1.4, then upgrade it to 1.4.
    
-2. Find your install location for the STM32 package (mine was /opt/Arduino1.8.5/portable/packages/STM32/hardware/STM32/1.4.0/
+2. Find your install location for the STM32 package (mine on Mint was /opt/Arduino1.8.5/portable/packages/STM32/hardware/STM32/1.4.0/
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
-you are indeed in the STM32 region.
+you are indeed in the STM32 region. On my Windows machine I found the files here:  C:\Users\Brian\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.4.0\
 
 a. inside the .../variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files..
 
