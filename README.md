@@ -30,19 +30,20 @@ The most obvious implication is that we now have no way to "view" any output, ev
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
 And the HAL Driver software is too big, even if we used the TX/RX and USB Serial adapter.)
 
-There are three hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
-with the F030F4. These libraries are:
+There are several hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
+with the F030F4. These libraries (with example files) are:
 
  - __SerialBB__ - a simple software (bit-bang) duplex serial driver, default 19200. 
       So a terminal can be used. TXD/RXD ie PA9/PA10.
  - __WireBB__ - a limited software I2C driver. 1-byte data write only. PA5/PA6.
  - __oledf030f4__ - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using WireBB.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
+ - __ADXL345-030f4__ - "Proof of concept" of I2C input device operating on WireBB instead of original Wire.
 
 Quality = hacked together, code not even tidied up yet.  But they are working.
 Code size = comfortable in our tiny flash space.
 The library code is intentionally minimal - just enough to get the job done, of being able to "talk"
-to this board. (Enhancement to add buffered uart TX, or the rest of Wire functionality might be useful.)
+to this board. 
 These libraries were intended for exactly this target (arduino ide / STM32F030F4P6)
 and no thought was made to adapting to other purposes. (Which may be quite practical, though. Feel welcome!)
 
