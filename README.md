@@ -35,7 +35,7 @@ with the F030F4. These libraries (with example files) are:
 
  - __SerialBB__ - a simple software (bit-bang) duplex serial driver, default 19200. 
       So a terminal can be used. TXD/RXD ie PA9/PA10.
- - __WireBB__ - a limited software I2C driver. read, 1-byte data write. PA5/PA6.
+ - __WireBB__ - a software I2C driver. read, 1-byte data write. PA5/PA6.
  - __oledf030f4__ - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using WireBB.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
  - __ADXL345-030f4__ - "Proof of concept" of I2C input device operating on WireBB instead of original Wire.
