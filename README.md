@@ -24,7 +24,7 @@ And get a 3V TTL USB serial adapter (CP2102/CH340) while you are at it ($1.5). Y
 ## Libraries Included Here:
 
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 8K. 
-However, #including any of arduino's regular Serial, Wire, SPI, will also add __many K__ each to the build size, breaking the 16K limit.
+However, #including any of arduino's regular __Serial__, __Wire__, or __SPI__, will also add __many K__ each to the build size, breaking the 16K limit.
 
 The most obvious implication is that we now have no way to "view" any output, even any debug information,
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
@@ -46,6 +46,8 @@ The library code is intentionally minimal - just enough to get the job done, of 
 to this board. 
 These libraries were intended for exactly this target (arduino ide / STM32F030F4P6)
 and no thought was made to adapting to other purposes. (Which may be quite practical, though. Feel welcome!)
+
+And re SPI, there is no reason that the simple SoftwareSPI (github/Flickerstrip) shouldn't press into service easily.
 
 ## Installation:
 <img align="right" src="P1070121.JPG">
