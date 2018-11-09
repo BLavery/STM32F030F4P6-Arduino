@@ -30,7 +30,7 @@ However, #including arduino's regular __Serial__ will also add __many K__ to the
 
 The most obvious implication is that we now have no easy way to "view" any output, even any debug information,
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
-And the HAL Driver software is too big, even if we used the TX/RX and USB Serial adapter.)
+And the native Serial Driver software is too big.)
 
 There are several hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, and we can choose our Wire pins. These libraries (with example files) are:
