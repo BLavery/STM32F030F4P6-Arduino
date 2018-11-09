@@ -1,5 +1,7 @@
 # ADXL345
 Arduino code for the ADXL345 accelerometer 
+* MOD FOR WireBB version of I2C *
+
 
 For complete hookup and tutorial see bildr.org: http://bildr.org/2011/03/adxl345-arduino/
 
