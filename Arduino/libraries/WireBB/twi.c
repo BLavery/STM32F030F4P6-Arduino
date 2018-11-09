@@ -1,7 +1,7 @@
 //  B Lavery 2018
 //  Derived from arduino/esp8266 file core_esp8266_si2c.c  (2015 Hristo Gochkov)
 //  transmit only
-// V 0.0.1
+// V 0.0.2
   
 #include "twi.h"
 
@@ -26,7 +26,11 @@ void twi_init(){
   DELAY();
 }
 
+
+
+
 static bool twi_write_start(void) {
+
   SDA_HIGH();  
   if (SDA_READ() == 0) 
       return false;
@@ -35,12 +39,15 @@ static bool twi_write_start(void) {
   DELAY();
   SDA_LOW();
   DELAY();
-  SCL_LOW();
-  DELAY();
+//  SCL_LOW();
+//  DELAY();
   return true;
 }
 
 static bool twi_write_stop(void){
+	SCL_LOW();
+	SDA_LOW();
+	DELAY();
   SCL_HIGH();
   uint32_t t0 = micros();
   while (SCL_READ() == 0 && (micros()-t0) < TWI_CLOCKSTRETCHLIMIT)
@@ -48,25 +55,27 @@ static bool twi_write_stop(void){
   DELAY();
   SDA_HIGH();
   DELAY();
-  //return true;
-  return SDA_READ();
+  return true;
+  //return SDA_READ();
 }
 
 static bool twi_write_bit(bool bit) {
+  SCL_LOW();
   bit ? SDA_HIGH() : SDA_LOW();
   DELAY();         
   SCL_HIGH();
-  DELAY();
+  //DELAY();
   uint32_t t0 = micros();
   while (SCL_READ() == 0 && (micros()-t0) < TWI_CLOCKSTRETCHLIMIT)
        ;// Clock stretching
-  SCL_LOW();     
+  //SCL_LOW();     
   DELAY();
   return true;
 }
 
 static bool twi_read_bit(void) {
   bool bit;
+  SCL_LOW();
   SDA_HIGH();   
   DELAY();
   SCL_HIGH();
@@ -75,8 +84,8 @@ static bool twi_read_bit(void) {
         ;// Clock stretching
   DELAY();  
   bit = SDA_READ();
-  SCL_LOW();
-  DELAY();
+ // SCL_LOW();
+ // DELAY();
   return bit;
 }
 
@@ -92,17 +101,17 @@ static bool twi_write_byte(unsigned char byte) {
 unsigned char twi_writeTo(unsigned char address, unsigned char * buf, unsigned int len, bool sendStop){
   unsigned int i;
   if(!twi_write_start()) 
-      return 4;//line busy
+      return I2C_SDA_HELD_LOW_AFTER_INIT;//line busy
   if(!twi_write_byte(((address << 1) | 0) & 0xFF)) {
       if (sendStop) 
           twi_write_stop();
-      return 2; //received NACK on transmit of address
+      return I2C_SCL_HELD_LOW_AFTER_READ; //received NACK on transmit of address
   }    	
   for(i=0; i<len; i++) {
     if(!twi_write_byte(buf[i])) {
         if (sendStop) 
             twi_write_stop();
-        return 3;//received NACK on transmit of data
+        return I2C_SDA_HELD_LOW;//received NACK on transmit of data
     }
   }
   if(sendStop)  
@@ -115,9 +124,43 @@ unsigned char twi_writeTo(unsigned char address, unsigned char * buf, unsigned i
     SCL_HIGH();
     DELAY();
   }
-  return 0;
+  return I2C_OK;
 }
-/*
-unsigned char twi_readFrom(unsigned char address, unsigned char* buf, unsigned int len, unsigned char sendStop);
-unsigned char twi_read_byte(bool nack);
-*/
+
+
+static unsigned char twi_read_byte(bool nack) {
+  unsigned char byte = 0;
+  unsigned char bit;
+  for (bit = 0; bit < 8; bit++) byte = (byte << 1) | twi_read_bit();
+  twi_write_bit(nack);
+  return byte;
+}
+
+
+unsigned char twi_readFrom(unsigned char address, unsigned char* buf, unsigned int len, unsigned char sendStop){
+  unsigned int i;
+  if(!twi_write_start()) 
+      return I2C_SDA_HELD_LOW_AFTER_INIT;//line busy
+  if(!twi_write_byte(((address << 1) | 1) & 0xFF)) 
+  {
+    if (sendStop) 
+        twi_write_stop();
+    return I2C_SCL_HELD_LOW_AFTER_READ;//received NACK on transmit of address
+  }
+  for(i=0; i<(len-1); i++) 
+      buf[i] = twi_read_byte(false);
+  buf[len-1] = twi_read_byte(true);
+  if(sendStop) 
+     twi_write_stop();
+  i = 0;
+  while(SDA_READ() == 0 && (i++) < 10)
+  {
+    SCL_LOW();
+    DELAY();
+    SCL_HIGH();
+    DELAY();
+  }
+  return I2C_OK;
+}
+
+

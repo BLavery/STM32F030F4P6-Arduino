@@ -20,6 +20,9 @@ void twi_init();
 void twi_stop(void);
 uint8_t twi_writeTo(unsigned char address, unsigned char * buf, unsigned int len, bool sendStop);
 
+unsigned char twi_readFrom(unsigned char address, unsigned char* buf, unsigned int len, unsigned char sendStop);
+
+
 
 #ifdef __cplusplus
 }
