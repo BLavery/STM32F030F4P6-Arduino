@@ -81,13 +81,13 @@ In its libraries folder, add the libraries supplied here.
   
   PA4  D4  - On-board LED
   
-  PA5  D5  - SCK   SCL
+  PA5  D5  - 
   
-  PA6  D6  - MISO  SDA  
+  PA6  D6  - 
   
-  PA7  D7  - MOSI  
+  PA7  D7  - 
   
-  PB1  D8  - SS
+  PB1  D8  - 
   
   PA9  D9  - UART Header "TXD" 
   
@@ -123,10 +123,6 @@ A7	D22 ~ PA7
 A8	D23 ~ PB1
 
 	
-Serial/I2C/SPI pins listed above are nominal, because we won't use the native software. 
-Suggest use the listed pins if emulating those functions in library/sketch software.
-~The library codes above implicitly use these pins as in variant.h.~
-
 ## Regarding Serial: 
 
 in variant.h, we have the line #define SERIAL_UART_INSTANCE    __0__ -- it could be changed to 1
@@ -141,7 +137,7 @@ Note the pic also shows no USB-micro connection to the STM32 board. That would b
 
 ## Acknowledgement:
 
-The above code for IDE support is NEARLY identical to here:
+The above code for IDE support is NEARLY the same as here:
     https://github.com/stm32duino/Arduino_Core_STM32/issues/165
     
 ... except for different (more consistent?) PA13 = D13  PA14 = D14, 
