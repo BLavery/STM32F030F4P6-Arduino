@@ -146,6 +146,6 @@ The above code for IDE support is NEARLY identical to here:
 ... except for different (more consistent?) PA13 = D13  PA14 = D14, 
 preserving RX and TX where they are marked as such on the end header (PA9, PA10),
 keeping SDA/SCL off the serial header,
-and disabling the HAL Serial code.
+and disabling the barely/not useable HAL Serial code to save precious flash.
 
 
