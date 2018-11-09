@@ -47,7 +47,7 @@ to this board.
 These libraries were intended for exactly this target (arduino ide / STM32F030F4P6)
 and no thought was made to adapting to other purposes. (Which may be quite practical, though. Feel welcome!)
 
-And re SPI, there is no reason that the simple SoftwareSPI (github/Flickerstrip) shouldn't press into service easily.
+And re SPI, there is no reason that the very simple SoftwareSPI (github/Flickerstrip) shouldn't press into service easily. So RF24 radio modules or TFT LCD displays might be manageable if we can control their code bloat.
 
 ## Installation:
 <img align="right" src="P1070121.JPG">
