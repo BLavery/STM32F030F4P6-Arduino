@@ -63,7 +63,7 @@ a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, 
 b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patch in the GenF030 "excerpt" section.
 
 3. Find your user sketchbook folder ("(documents).../Arduino/" probably, but File/Preferences in your IDE should tell you).
-In its libraries folder, add the 3 libraries supplied here.
+In its libraries folder, add the libraries supplied here.
 
 
 ## Digital pin numbering:
