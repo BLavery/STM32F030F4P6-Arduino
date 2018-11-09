@@ -24,9 +24,9 @@ And get a 3V TTL USB serial adapter (CP2102 and CH340 are 3V) while you are at i
 ## Libraries Included Here:
 
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 8K. 
-However, #including any of arduino's regular __Serial__, __Wire__, or __SPI__, will also add __many K__ each to the build size, breaking the 16K limit.
+However, #including any of arduino's regular __Serial__ or __SPI__ will also add __many K__ each to the build size, breaking the 16K limit. Hal __Wire__ conflicts with the uart header use.
 
-The most obvious implication is that we now have no way to "view" any output, even any debug information,
+The most obvious implication is that we now have no easy way to "view" any output, even any debug information,
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
 And the HAL Driver software is too big, even if we used the TX/RX and USB Serial adapter.)
 
@@ -34,8 +34,8 @@ There are several hacked-together lightweight arduino libraries included here, s
 with the F030F4. These libraries (with example files) are:
 
  - __SerialBB__ - a simple software (bit-bang) duplex serial driver, default 19200. 
-      So a terminal can be used. TXD/RXD ie PA9/PA10.
- - __WireBB__ - a software I2C driver. read, 1-byte data write. PA5/PA6.
+      So a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header.
+ - __WireBB__ - a software I2C driver. read, 1-byte data write. PA5/PA6, but configurable.
  - __oledf030f4__ - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via WireBB.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
  - __ADXL345-030f4__ - "Proof of concept" of I2C input device operating using I2C reads on WireBB.
