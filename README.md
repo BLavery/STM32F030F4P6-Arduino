@@ -122,8 +122,8 @@ A7	D22 ~ PA7
 A8	D23 ~ PB1
 
 	
-Serial/I2C/SPI pins listed above are nominal. 
-Suggest use the listed pins if emulating those functions in sketch software.
+Serial/I2C/SPI pins listed above are nominal, because we won't use the native software. 
+Suggest use the listed pins if emulating those functions in library/sketch software.
 ~The library codes above implicitly use these pins as in variant.h.~
 
 ## Regarding Serial: 
