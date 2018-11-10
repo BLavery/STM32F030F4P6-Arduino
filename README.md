@@ -140,7 +140,7 @@ V. 0.0.1
 ## Acknowledgement:
 
 The above code for IDE support is NEARLY the same as here:
-    https://github.com/stm32duino/Arduino_Core_STM32/issues/165
+    https://github.com/stm32duino/Arduino_Core_STM32/issues/165.
 I discovered that work a little after I had separately configured and tested as per the files here.  
     
 The slight differences: different (more consistent?) PA13 = D13  PA14 = D14, 
