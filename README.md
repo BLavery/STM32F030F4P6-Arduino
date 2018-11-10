@@ -145,7 +145,7 @@ The above code for IDE support is NEARLY the same as this:
     https://github.com/stm32duino/Arduino_Core_STM32/issues/165.
 I discovered that work a little after I had separately configured and tested as per the files here.  
     
-The slight differences: different (more consistent?) PA13 = D13  PA14 = D14, 
+The slight differences? different (more consistent?) PA13 = D13  PA14 = D14, 
 preserving RX and TX where they are marked as such on the end header (PA9, PA10),
 keeping SDA/SCL off the serial header,
 and disabling the barely/not useable native Serial code to save precious flash.
