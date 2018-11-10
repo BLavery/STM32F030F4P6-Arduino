@@ -135,17 +135,22 @@ In the second pic above showing USB Serial adapter and (clone) STLink, with BOTH
 
 Note the pic also shows no USB-micro connection to the STM32 board. That would be a THIRD voltage source in this case!   The moral: Whatever is your connection configuration, THINK about where your board supply is coming from.
 
+V. 0.0.1
+
 ## Acknowledgement:
 
 The above code for IDE support is NEARLY the same as here:
     https://github.com/stm32duino/Arduino_Core_STM32/issues/165
+I discovered that work a little after I had separately configured and tested as per the files here.  
     
-... except for different (more consistent?) PA13 = D13  PA14 = D14, 
+The slight differences: different (more consistent?) PA13 = D13  PA14 = D14, 
 preserving RX and TX where they are marked as such on the end header (PA9, PA10),
 keeping SDA/SCL off the serial header,
-and disabling the barely/not useable HAL Serial code to save precious flash.
+and disabling the barely/not useable native Serial code to save precious flash.
 
-The official coming 1.5 board support will obviously be the definitive eventual configuration. 
+You __could__ choose to go to the proper 1.5 supported pinouts instead: instead of using files from HERE for .../variants/DEMOF030F4/, you might be brave enough to fetch the equivalent directly out of https://github.com/stm32duino/Arduino_Core_STM32/tree/master/variants/DEMOF030F4/.  Carefully!
+
+Obviously the official coming 1.5 board support will be the definitive eventual configuration. 
 The Installation parts 1 and 2 above will become obsolete.
 But the library files here (Installation part 3 above) will remain working and valid. 
 
