@@ -141,7 +141,7 @@ V. 0.0.1
 
 ## Acknowledgement:
 
-The above code for IDE support is NEARLY the same as here:
+The above code for IDE support is NEARLY the same as this:
     https://github.com/stm32duino/Arduino_Core_STM32/issues/165.
 I discovered that work a little after I had separately configured and tested as per the files here.  
     
