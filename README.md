@@ -72,6 +72,8 @@ In its libraries folder, add the libraries supplied here.
 
 (Revised 12 Nov)
 
+In your sketch, pins can be referenced by any of (for example) PA4,  D4  or just 4. I find using PA4 style to be intuitive as I look at the hardware.
+
   PA0  D0 
   
   PA1  D1 <img align="right" src="ss66.jpg">
