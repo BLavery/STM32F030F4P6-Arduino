@@ -9,8 +9,7 @@ for getting the STM32F030F4P6 Cortex-M0 "Minimum System Dev" or "Demo" board
 up and running on Arduino IDE.  eBay and AliExpress are flooded with these for $2.  This may be a 32-bit chip at 48MHz, but it is the baby of the STM32 line.
 
 I expect that the STM32duino project may shortly release 
-support for this chip, in which case then use the official version, of course.  Pin numbering/useage used here might 
-not be identical on the official version.
+support for this chip, in which case then use the official version, of course.  
 
 In any case, the library modules in this project should still be valid on an official support version.
 
@@ -63,7 +62,7 @@ and no thought was made to adapting to other purposes. (Which may be quite pract
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
 you are indeed in the STM32 region. On my Windows install I found the files here:  C:\Users\Brian\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.4.0\
 
-a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files.
+a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files. (Now - 12 Nov - aligned with coming V1.5.)
 
 b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patch in the GenF030 "excerpt" section.
 
@@ -71,65 +70,59 @@ b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patc
 In its libraries folder, add the libraries supplied here.
 
 
-## Digital pin numbering:
+## Digital pin numbering: (Revised 12 Nov)
 
   PA0  D0 
   
   PA1  D1 <img align="right" src="ss66.jpg">
   
-  PA2  D2  - 
+  PA2  D2  
   
-  PA3  D3  - 
+  PA3  D3  
   
-  PA4  D4  - On-board LED
+  PA4  D4  = On-board LED
   
-  PA5  D5  - 
+  PA5  D5  
   
-  PA6  D6  - 
+  PA6  D6  
   
   PA7  D7  - 
   
   PB1  D8  - 
   
-  PA9  D9  - UART Header "TXD" 
+  PA9  D9  = UART Header "TX" 
   
-  PA10 D10 - UART Header "RXD" 
+  PA10 D10 = UART Header "RX" 
   
-  D11 - not for use
+  PA13 D11 - SWDIO  = STlink Header "DIO"
   
-  D12 - not for use
-  
-  PA13 D13 - SWDIO  = STlink Header "DIO"
-  
-  PA14 D14 - SWCLK  = STlink header "CLK"
+  PA14 D12 - SWCLK  = STlink header "CLK"
   
 
-## Analog pins:
+## Analog pins: (Revised 12 Nov)
 
-A0	D15 ~ PA0
+A0	D13 ~ PA0
 
-A1	D16 ~ PA1
+A1	D14 ~ PA1
 
-A2	D17 ~ PA2
+A2	D15 ~ PA2
 
-A3	D18 ~ PA3
+A3	D16 ~ PA3
 
-A4	D19 ~ PA4
+A4	D17 ~ PA4
 
-A5	D20 ~ PA5
+A5	D18 ~ PA5
 
-A6	D21 ~ PA6
+A6	D19 ~ PA6
 
-A7	D22 ~ PA7
+A7	D20 ~ PA7
 
-A8	D23 ~ PB1
+A8	D21 ~ PB1
 
 	
 ## Regarding Serial: 
 
-in variant.h, we have the line #define SERIAL_UART_INSTANCE    __0__ -- it could be changed to 1
-You MIGHT get HAL Serial module to run (with barely enough flash left for anything else).
-If you do activate inbuilt HAL Serial, then expect conflict with "Serial" as used in lib SerialBB.
+
 
 ## Wiring Hint:
 
@@ -137,23 +130,15 @@ In the second pic above showing USB Serial adapter and (clone) STLink, with BOTH
 
 Note the pic also shows no USB-micro connection to the STM32 board. That would be a THIRD voltage source in this case!   The moral: Whatever is your connection configuration, THINK about where your board supply is coming from.
 
-V. 0.0.1
+V. 0.2.0
 
 ## Acknowledgement:
 
-The above code for IDE support is NEARLY the same as this:
+The above code for IDE support is now (12 Nov) the same as this:
     https://github.com/stm32duino/Arduino_Core_STM32/issues/165.
-I discovered that work a little after I had separately configured and tested as per the files here.  
+(IE, Earlier version here has now been brought into line with forthcoming V1.5.)  
     
-The slight differences? different (more consistent?) PA13 = D13  PA14 = D14, 
-preserving RX and TX where they are marked as such on the end header (PA9, PA10),
-keeping SDA/SCL off the serial header,
-and disabling the barely/not useable native Serial code to save precious flash.
-
-You __could__ choose to go to the proper 1.5 supported pinouts instead: instead of using files from HERE for .../variants/DEMOF030F4/, you might be brave enough to fetch the equivalent directly out of https://github.com/stm32duino/Arduino_Core_STM32/tree/master/variants/DEMOF030F4/.  Carefully!
-
-Obviously the official coming 1.5 board support will be the definitive eventual configuration. 
-The Installation parts 1 and 2 above will become obsolete.
+The Installation parts 1 and 2 above will become obsolete/unnecessary here when 1.5 is released.
 But the library files here (Installation part 3 above) will remain working and valid. 
 
 
