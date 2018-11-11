@@ -72,7 +72,7 @@ In its libraries folder, add the libraries supplied here.
 
 (Revised 12 Nov)
 
-In your sketch, pins can be referenced by any of (for example) PA4,  D4  or just 4. I find using PA4 style to be intuitive as I look at the hardware.
+In your sketch, pins can be referenced by any of (for LED, for example) PA4,  D4  or just 4. I find using PA4 style to be intuitive as it agrees with the board markings.
 
   PA0  D0 
   
