@@ -68,7 +68,9 @@ b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patc
 In its libraries folder, add the libraries supplied here.
 
 
-## Digital pin numbering: (Revised 12 Nov)
+## Digital pin numbering: 
+
+(Revised 12 Nov)
 
   PA0  D0 
   
@@ -97,7 +99,9 @@ In its libraries folder, add the libraries supplied here.
   PA14 D12 - SWCLK  = STlink header "CLK"
   
 
-## Analog pins: (Revised 12 Nov)
+## Analog pins: 
+
+(Revised 12 Nov)
 
 A0	D13 ~ PA0
 
