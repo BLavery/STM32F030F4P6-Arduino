@@ -134,7 +134,7 @@ In the second pic above showing USB Serial adapter and (clone) STLink, with BOTH
 
 Note the pic also shows no USB-micro connection to the STM32 board. That would be a THIRD voltage source in this case!   The moral: Whatever is your connection configuration, THINK about where your board supply is coming from.
 
-V. 0.2.0
+V. 0.2.0 
 
 ## Acknowledgement:
 
