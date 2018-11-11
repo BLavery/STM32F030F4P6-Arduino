@@ -36,9 +36,9 @@ And the native Serial Driver software is too big.)
 There are several hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, and we can choose our Wire pins. These libraries (with example files) are:
 
- - __SerialBB__ - a simple software (bit-bang) duplex serial driver, default 19200. 
+ - __SerialBB__ - a simple software (bit-bang, low performance) duplex serial driver, default 19200. 
       So a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
- - __WireBB__ - a software I2C driver. read, 1-byte data write. PA5/PA6, but pin configurable.
+ - __WireBB__ - a software I2C driver. PA5/PA6, but pin configurable.
  - __oledf030f4__ - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via WireBB.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
  - __ADXL345-030f4__ - "Proof of concept" of I2C input device operating using I2C reads on WireBB.
