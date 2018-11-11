@@ -44,41 +44,28 @@ extern "C"{
  *----------------------------------------------------------------------------*/
 extern const PinName digitalPin[];
 
-enum {
-  PA0,  //D0 
-  PA1,  //D1 
-  PA2,  //D2  - 
-  PA3,  //D3  - 
-  PA4,  //D4  - LED
-  PA5,  //D5  - SCK   SCL
-  PA6,  //D6  - MISO  SDA  
-  PA7,  //D7  - MOSI  
-  PB1,  //D8  - SS
-  PA9,  //D9  - TX UART Header
-  PA10, //D10 - RX UART Header
-  PF0,   // xtal
-  PF1,   // xtal
-  PA13, //D13 - SWDIO
-  PA14, //D14 - SWCLK
- // Duplicated pins in order to be aligned with PinMap_ADC
- // A0 have to be greater than NUM_ANALOG_INPUTS 
-  PA0_1,  //D15/A0 ~ D0
-  PA1_1,  //D16/A1 ~ D1
-  PA2_1,  //D17/A2 ~ D2
-  PA3_1,  //D18/A3 ~ D3
-  PA4_1,  //D19/A4 ~ D4
-  PA5_1,  //D20/A5 ~ D5
-  PA6_1,  //D21/A6 ~ D6
-  PA7_1,  //D22/A7 ~ D7
-  PB1_1,  //D23/A8 ~ D8
-  PEND
-};
+// USB connector on the top, MCU side
+// Left Side
+#define PA0  0  //D0/A0
+#define PA1  1  //D1/A1
+#define PA2  2  //D2/A2 - TX
+#define PA3  3  //D3/A3 - RX
+#define PA4  4  //D4/A4 - LED
+// Right side
+#define PA5  5  //D5/A5 - SCK
+#define PA6  6  //D6/A6 - MISO
+#define PA7  7  //D7/A7 - MOSI
+#define PB1  8  //D8/A8 - SS
+#define PA9  9  //D9    - SCL (TX UART header)
+#define PA10 10 //D10   - SDA (RX UART header)
+#define PA13 11 //D11   - SWDIO
+#define PA14 12 //D12   - SWCLK
 
 // This must be a literal with the same value as PEND
-#define NUM_DIGITAL_PINS        24
-// This must be a literal with a value less than or equal to to MAX_ANALOG_INPUTS
+#define NUM_DIGITAL_PINS        22
+// This must be a literal with a value less than or equal to MAX_ANALOG_INPUTS
 #define NUM_ANALOG_INPUTS       9
-#define NUM_ANALOG_FIRST        15
+#define NUM_ANALOG_FIRST        13
 
 // On-board LED pin number
 #define LED_BUILTIN             PA4
@@ -91,8 +78,8 @@ enum {
 #define PIN_SPI_SCK             PA5
 
 // I2C Definitions
-#define PIN_WIRE_SDA            PA6 
-#define PIN_WIRE_SCL            PA5  
+#define PIN_WIRE_SDA            PA10 // Default for Arduino connector compatibility
+#define PIN_WIRE_SCL            PA9  // Default for Arduino connector compatibility
 
 // Timer Definitions
 // Do not use timer used by PWM pins when possible. See PinMap_PWM.
@@ -102,13 +89,11 @@ enum {
 #define TIMER_SERVO             TIM16  //TODO: advanced-control timers don't work
 
 // UART Definitions
-#define SERIAL_UART_INSTANCE    0
-// You COULD set uart instances to 1. Cost 700 bytes. 
-// Still unlikely to get a usable sketch using Serial into 16k. 
+#define SERIAL_UART_INSTANCE    1
 // Default pin used for 'Serial' instance
 // Mandatory for Firmata
-#define PIN_SERIAL_RX           PA10
-#define PIN_SERIAL_TX           PA9
+#define PIN_SERIAL_RX           PA3
+#define PIN_SERIAL_TX           PA2
 
 #ifdef __cplusplus
 } // extern "C"
