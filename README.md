@@ -37,7 +37,7 @@ with the F030F4. We can run a "Serial" on its uart header, and we can choose our
  - __SerialBB__ - a simple software (bit-bang, low performance) duplex serial driver, default 19200. 
       So a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
  - __WireBB__ - a software I2C driver. PA5/PA6, but pin configurable.
- - __oledf030f4__ - a basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via WireBB.
+ - __oledf030f4__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via WireBB.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
  - __ADXL345-030f4__ - "Proof of concept" of I2C input device operating using I2C reads on WireBB.
 
