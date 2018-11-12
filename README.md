@@ -31,22 +31,23 @@ The most obvious implication is that we now have no easy way to "view" any outpu
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
 And the native Serial Driver software is too big.)
 
-There are several hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
+There are some hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, and we can choose our Wire pins. These libraries (with example files) are:
 
  - __SerialBB__ - a simple software (bit-bang, low performance) duplex serial driver, default 19200. 
       So a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
- - __WireBB__ - a software I2C driver. PA5/PA6, but pin configurable.
- - __oledf030f4__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via WireBB.
-      So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015.
- - __ADXL345-030f4__ - "Proof of concept" of I2C input device operating using I2C reads on WireBB.
+ - __miniOled__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via SoftWire.
+      So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015. You need to also fetch and 
+      install other-party libraries SoftWire and AsyncDelay, which drive the I2C.
 
 Quality = hacked together, code not even tidied up yet.  But they are working.
 Code size = comfortable in our tiny flash space.
 The library code is intentionally minimal - just enough to get the job done, of being able to "talk"
 to this board. 
-These libraries were intended for exactly this target (arduino ide / STM32F030F4P6)
-and no thought was made to adapting to other purposes. (Which may be quite practical, though. Feel welcome!)
+
+Other Libraries:
+ - __SoftWire__ 2.0 from here: https://www.arduinolibraries.info/libraries/soft-wire
+ - __AsyncDelay__ (used by SoftWire) from here: https://github.com/stevemarple/AsyncDelay
 
 
 ## Installation:
@@ -65,7 +66,7 @@ a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, 
 b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patch in the GenF030 "excerpt" section.
 
 3. Find your user sketchbook folder ("(documents).../Arduino/" probably, but File/Preferences in your IDE should tell you).
-In its libraries folder, add the libraries supplied here.
+In its libraries folder, add the libraries supplied here, and the SoftWire & AsyncDelay ones too.
 
 
 ## Digital pin numbering: 
