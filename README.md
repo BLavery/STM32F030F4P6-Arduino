@@ -124,10 +124,6 @@ A7	D20 ~ PA7
 A8	D21 ~ PB1
 
 	
-## Regarding Serial: 
-
-
-
 ## Wiring Hint:
 
 In the second pic above showing USB Serial adapter and (clone) STLink, with BOTH CONNECTED AT ONE TIME, I leave off the +3V wire of the USB-Serial device. Otherwise the STM32 board gets 3V supply from 2 sources. Haven't tested it (!), but that sounds like a "BAD IDEA!"
