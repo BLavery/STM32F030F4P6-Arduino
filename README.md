@@ -45,7 +45,7 @@ Code size = comfortable in our tiny flash space.
 The library code is intentionally minimal - just enough to get the job done, of being able to "talk"
 to this board. 
 
-Other Libraries:
+Other Libraries, needed for miniOled:
  - __SoftWire__ 2.0 from here: https://www.arduinolibraries.info/libraries/soft-wire
  - __AsyncDelay__ (used by SoftWire) from here: https://github.com/stevemarple/AsyncDelay
 
