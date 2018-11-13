@@ -39,7 +39,7 @@ with the F030F4. We can run a "Serial" on its uart header, and we can run an ole
       Some info:  https://github.com/BLavery/miniSerial
  - __miniOled__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via SoftWire.
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015. You need to also fetch and 
-      install other-party libraries SoftWire and AsyncDelay, which drive the I2C.
+      install other-party libraries SoftWire and AsyncDelay, which drive the I2C. Some info: https://github.com/BLavery/miniOled
 
 Quality = working, if not elegant. 
 Code size = comfortable in our tiny flash space.
