@@ -31,7 +31,7 @@ The most obvious implication is that we now have no easy way to "view" any outpu
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
 And the native Serial Driver software is too big.)
 
-There are some hacked-together lightweight arduino libraries included here, so that we now **can** communicate 
+There are some new lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, and we can choose our Wire pins. These libraries (with example files) are:
 
  - __miniSerial__ - a simple software non-interrupt duplex serial driver, default 19200. 
