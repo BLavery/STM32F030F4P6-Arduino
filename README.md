@@ -50,6 +50,7 @@ Other Libraries, needed for miniOled:
  - __SoftWire__ 2.0 from here: https://www.arduinolibraries.info/libraries/soft-wire
  - __AsyncDelay__ (used by SoftWire) from here: https://github.com/stevemarple/AsyncDelay
 
+(And incidentally, SoftWire should be equally useable with other I2C devices on the '030F4P6.)
 
 ## Installation:
 <img align="right" src="P1070121.JPG">
