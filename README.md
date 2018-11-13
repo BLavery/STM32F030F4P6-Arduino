@@ -32,7 +32,7 @@ beyond toggling a LED!  (No serial terminal. It's not connected at USB connector
 And the native Serial Driver software is too big.)
 
 There are some new lightweight arduino libraries included here, so that we now **can** communicate 
-with the F030F4. We can run a "Serial" on its uart header, and we can choose our Wire pins. These libraries (with example files) are:
+with the F030F4. We can run a "Serial" on its uart header, and we can run an oled display with a "Wire" on i2c pins of our choice. These libraries (with example files) are:
 
  - __miniSerial__ - a simple software non-interrupt duplex serial driver, default 19200. 
       So a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
@@ -40,7 +40,7 @@ with the F030F4. We can run a "Serial" on its uart header, and we can choose our
       So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015. You need to also fetch and 
       install other-party libraries SoftWire and AsyncDelay, which drive the I2C.
 
-Quality = working, if not elegant.
+Quality = working, if not elegant. 
 Code size = comfortable in our tiny flash space.
 The library code is intentionally minimal - just enough to get the job done, of being able to "talk"
 to this board. 
