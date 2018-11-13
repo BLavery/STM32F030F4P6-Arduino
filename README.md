@@ -106,23 +106,23 @@ In your sketch, pins can be referenced by any of (for LED, for example) PA4,  D4
 
 (Revised 12 Nov)
 
-A0	D13 ~ PA0
+A0	~ PA0
 
-A1	D14 ~ PA1
+A1	~ PA1
 
-A2	D15 ~ PA2
+A2	~ PA2
 
-A3	D16 ~ PA3
+A3	~ PA3
 
-A4	D17 ~ PA4
+A4	~ PA4
 
-A5	D18 ~ PA5
+A5	~ PA5
 
-A6	D19 ~ PA6
+A6	~ PA6
 
-A7	D20 ~ PA7
+A7	~ PA7
 
-A8	D21 ~ PB1
+A8	~ PB1
 
 	
 ## Wiring Hint:
@@ -131,7 +131,7 @@ In the second pic above showing USB Serial adapter and (clone) STLink, with BOTH
 
 Note the pic also shows no USB-micro connection to the STM32 board. That would be a THIRD voltage source in this case!   The moral: Whatever is your connection configuration, THINK about where your board supply is coming from.
 
-V. 0.2.0 12 Nov 2018
+V. 0.3.0 13 Nov 2018
 
 ## Acknowledgement:
 
