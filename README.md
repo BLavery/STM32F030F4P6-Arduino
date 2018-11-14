@@ -13,7 +13,7 @@ In any case, the library modules in this project should still be valid on an off
 
 ## Programming?
 
-The USB micro connector is for 5V power only, not USB data. 
+The USB micro connector is for 5V power only, not USB data. (The chip does not support USB!)
 
 The only practical programming method is STLink.
 **Get one** ($3). Check elsewhere if you need any config/setup help. 
