@@ -91,9 +91,9 @@ In your sketch, pins can be referenced by any of (for LED, for example) PA4,  D4
   
   PA6  D6  
   
-  PA7  D7  - 
+  PA7  D7  
   
-  PB1  D8  - 
+  PB1  D8  
   
   PA9  D9  = UART Header "TX" 
   
