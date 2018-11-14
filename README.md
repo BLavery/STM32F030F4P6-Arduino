@@ -144,6 +144,6 @@ The above code for IDE support is now (12 Nov) the same as this (Adminius) versi
 The Installation parts 1 and 2 above will become obsolete/unnecessary here when 1.5 is released.
 But the library files here (Installation part 3 above) will remain working and valid. 
 
-The intention of this project here has been to get something up and running ASAP on this board. The board has been available "out there" now for a while. There will doubtless be in due course better solutions to its flash size limitations than the "mini" libraries above.  
+The intention of this project here has been to get something up and running ASAP on this board. The board has been available "out there" now for a while. There will doubtless be in due course more elegant solutions to its limitations than the "mini" libraries above.  
 
 
