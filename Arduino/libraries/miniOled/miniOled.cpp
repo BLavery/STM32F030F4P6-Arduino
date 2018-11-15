@@ -1,5 +1,5 @@
 /*
-V 0.2.0  miniOled.cpp
+V 0.3.0  miniOled.cpp
 
 A VERY BASIC oled SSD1306 (0.96" I2C) library, compatible with SoftWire I2C library.
 Designed initially to fit on STM32F030F4P6 board (16K flash, 48 MHz):
