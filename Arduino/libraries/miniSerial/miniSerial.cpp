@@ -2,7 +2,7 @@
 // A bit-banged low-footprint serial transmit/receive 
 // primarily for low-memory STM32F030F4P6    BL Nov 2018
 // By default uses PA9 as TX    PA10 as RX   -- regular 4-pin RX/TX end connector.
-// 8 bit no parity.  19200 seems ideal (default)
+// 8 bit no parity.  19200 seems ideal (default/max)  
 
 // tx will block during character transfer (abt 0.6 mSec each chr at 19200)
 // Your loop() must have free-running Serial.run(). No delay()s. Serial reception will suffer otherwise
