@@ -5,7 +5,7 @@
 #include <Arduino.h>
 
 #define BITDELAY  52 
-//  104 9600  baud  52 19200    26  38400 
+//  104 9600  baud  52 19200    
 
 class MiniSerial
 {
