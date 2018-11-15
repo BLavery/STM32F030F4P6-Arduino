@@ -34,7 +34,7 @@ And the native Serial software is too big.)
 There are some new lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, and we can run an oled display with a "Wire" on i2c pins of our choice. These libraries (with example files) are:
 
- - __miniSerial__ - a simple software non-interrupt duplex serial driver, default 19200. 
+ - __miniSerial__ - a simple software non-interrupt duplex serial driver, default/max 19200. 
       So now a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
       Some miniSerial info:  https://github.com/BLavery/miniSerial
  - __miniOled__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display. 
