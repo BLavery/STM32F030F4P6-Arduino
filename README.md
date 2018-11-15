@@ -35,18 +35,21 @@ There are some new lightweight arduino libraries included here, so that we now *
 with the F030F4. We can run a "Serial" on its uart header, and we can run an oled display with a "Wire" on i2c pins of our choice. These libraries (with example files) are:
 
  - __miniSerial__ - a simple software non-interrupt duplex serial driver, default 19200. 
-      So a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
-      Some info:  https://github.com/BLavery/miniSerial
- - __miniOled__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display, using I2C writes via SoftWire.
-      So we can see some output. Derived out of Daniel Turton's OzOled project 2014/2015. You need to also fetch and 
-      install other-party libraries SoftWire and AsyncDelay, which drive the I2C. Some info: https://github.com/BLavery/miniOled
+      So now a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
+      Some miniSerial info:  https://github.com/BLavery/miniSerial
+ - __miniOled__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display. 
+      Optionally using I2C writes via SoftWire (allowing pin choice), or native I2C on PA9 PA10.
+      So now we can see some output. 
+      Derived out of Daniel Turton's OzOled project 2014/2015. 
+      To use software I2c, you need to also fetch and install other-party libraries SoftWire and AsyncDelay. 
+      Some miniOled info: https://github.com/BLavery/miniOled
 
 Quality = working, if not elegant. 
 Code size = comfortable in our tiny flash space.
 The library code is intentionally minimal - just enough to get the job done, of being able to "talk"
 to this board. 
 
-Other Libraries, needed for miniOled:
+Other Libraries, needed for miniOled to run on pins other than PA9 PA10:
  - __SoftWire__ 2.0 from here: https://www.arduinolibraries.info/libraries/soft-wire
  - __AsyncDelay__ (used by SoftWire) from here: https://github.com/stevemarple/AsyncDelay
 
@@ -68,7 +71,7 @@ a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, 
 b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patch in the GenF030 "excerpt" section.
 
 3. Find your user sketchbook folder ("(documents).../Arduino/" probably, but File/Preferences in your IDE should tell you).
-In its libraries folder, add the libraries supplied here, and the SoftWire & AsyncDelay ones too.
+In its libraries folder, add the libraries supplied here, and the SoftWire & AsyncDelay ones too if needed.
 
 
 ## Digital pin numbering: 
