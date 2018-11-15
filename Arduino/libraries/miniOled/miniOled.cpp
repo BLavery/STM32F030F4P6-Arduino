@@ -232,8 +232,7 @@ void OLED::sendCommand(byte command){
 	Wire.write(OLED_COMMAND_MODE);//data mode
 	Wire.write(command);
 	Wire.endTransmission();    // stop transmitting
-	Wire.sdaLow(&Wire);  
-}
+
 
 
 void OLED::sendData(byte data){
@@ -242,7 +241,6 @@ void OLED::sendData(byte data){
 	Wire.write(OLED_DATA_MODE);//data mode
 	Wire.write(data);
 	Wire.endTransmission();    // stop transmitting
-	Wire.sdaLow(&Wire);
 }
 
 
