@@ -25,11 +25,11 @@ And get a 3V TTL USB serial adapter (CP2102 and CH340 are 3V) while you are at i
 ## Libraries Included Here:
 
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 8K. 
-However, including calls in your sketch to arduino's regular __Serial__ will also add __many K__ to the build size, abruptly breaking the 16K limit. (One Serial.println() and you've used 15.5k!) And the __Wire__ pin assignments conflict with the regular uart header use.
+However, including calls in your sketch to arduino's regular __Serial__ will also add __many K__ to the build size, abruptly breaking the 16k limit. (One Serial.println() and you've used 15.5k!) And the __Wire__ pin assignments conflict with the regular uart header use.
 
 The most obvious implication is that we now have no easy way to "view" any output, even any debug information,
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
-And the native Serial Driver software is too big.)
+And the native Serial software is too big.)
 
 There are some new lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, and we can run an oled display with a "Wire" on i2c pins of our choice. These libraries (with example files) are:
