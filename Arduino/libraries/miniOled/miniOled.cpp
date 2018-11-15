@@ -25,9 +25,17 @@ https://github.com/stevemarple/AsyncDelay   The AsyncDelay library, used by Soft
 */
 
 #include "miniOled.h"
-#include <SoftWire.h>
-SoftWire Wire(PA6, PA5);  // default gpio (SoftWire needs a default)
+#define SOFTWIRE
+// define SOFTWIRE, and software library SoftWire will be used, with choice of pins
+// undefine SOFTWIRE, and native Wire on sda PA10  scl PA9   will apply
 
+
+#ifdef SOFTWIRE
+	#include <SoftWire.h>
+	SoftWire Wire(PA6, PA5);  // default gpio (SoftWire needs a default)
+#else
+	#include <Wire.h>
+#endif
 
 // 6x8 Font ASCII 32 - 127 Implemented
 
@@ -232,7 +240,7 @@ void OLED::sendCommand(byte command){
 	Wire.write(OLED_COMMAND_MODE);//data mode
 	Wire.write(command);
 	Wire.endTransmission();    // stop transmitting
-
+}
 
 
 void OLED::sendData(byte data){
@@ -422,7 +430,8 @@ void OLED::drawBitmap(const byte *bitmaparray, byte X, byte Y, byte width, byte 
 
 // =================== High Level ===========================
 
-void OLED::init(int sda, int scl){
+void OLED::init(int sda, int scl){  // customise sda.scl ignored for regular Wire
+#ifdef SOFTWIRE
 	Wire.enablePullups();
     Wire.setRxBuffer(ibuffer, 60);  // common buffer is OK, but rx buffer not used anyway
     Wire.setTxBuffer(ibuffer, 60);
@@ -431,6 +440,7 @@ void OLED::init(int sda, int scl){
 		Wire.setSda(sda);   // non-default pins
 		Wire.setScl(scl);
     }
+#endif
 	Wire.begin() ;   
 
 	static const byte ini[] = {0xae,0xa6,0xAE,0xD5,0x80,0xA8,0x3F,0xD3,
