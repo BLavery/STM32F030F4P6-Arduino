@@ -25,9 +25,9 @@ And get a 3V TTL USB serial adapter (CP2102 and CH340 are 3V) while you are at i
 ## Libraries Included Here:
 
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 8K. 
-However, including calls in your sketch to arduino's regular __Serial__ will also add __many K__ to the build size, abruptly breaking the 16k limit. (One Serial.println() and you've used 15.5k!) 
+However, including calls in your sketch to arduino's regular __Serial__ will also add __many K__ to the build size, abruptly passing the 16k limit. (One Serial.println() and you've used 15.5k! Yes, it works - on PA2/PA3 - but your sketch has no code space left.) 
 
-And the __Wire__ pin assignments conflict with the regular uart header use.
+And the __Wire__ pin assignments conflict with the uart header use, as built.
 
 The most obvious implication is that we now have no easy way to "view" any output, even any debug information,
 beyond toggling a LED!  (No serial terminal. It's not connected at USB connector. 
