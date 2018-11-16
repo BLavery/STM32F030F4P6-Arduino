@@ -9,12 +9,13 @@ unsigned long t0;
 void setup(void)
 {
       Serial.begin(19200);
+      // Serial.begin(19200, PA2, PA3);
 	  pinMode(LED_BUILTIN, OUTPUT);
 	  delay(500);  // IDE's serial terminal may take a bit of wakeup time. Don't lose first chrs. 
 	  t0 = millis();   // used by loop()
-	  Serial.txStr("\nminiSerial RX/TX demo - software based, non native Serial port.\n");
-	  Serial.txStr("Transmit is unbuffered, Receive is buffered.\n");
-	  Serial.txStr("Type some input. Demo: Buffer is read each second.\n");
+	  Serial.print("\nminiSerial RX/TX demo - software based, non native Serial port.\n");
+	  Serial.print("Transmit is unbuffered, Receive is buffered.\n");
+	  Serial.print("Type some input. Demo: Buffer is read each second.\n");
 
 }
 
@@ -31,9 +32,9 @@ void loop()
 	// here only every 1 sec:    
     digitalWrite(LED_BUILTIN, 1-digitalRead(LED_BUILTIN));
 	int ch;
-	while ((ch=Serial.rxChar())>=0) // read any/all chrs from buffer
+	while ((ch=Serial.read())>=0) // read any/all chrs from buffer
 	{
-          Serial.txStr("From buffer: ");
-		  Serial.txByte(ch, true);   // send it back out
+          Serial.print("From buffer: ");
+		  Serial.println(ch);   // send it back out
 	}
 }
