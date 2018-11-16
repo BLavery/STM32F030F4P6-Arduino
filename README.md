@@ -36,15 +36,16 @@ And the native Serial software is too big.)
 There are some new lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, and we can run an oled display with a "Wire" on i2c pins of our choice. These libraries (with example files) are:
 
- - __miniSerial__ - a simple software non-interrupt duplex serial driver, default/max 19200. 
-      So now a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
+ - __miniSerial__ - a simple software non-interrupt low-performance duplex serial driver, default/max 19200. 
+      So now a terminal can be used with your sketch. TXD/RXD ie PA9/PA10, ie at the correct uart header, 
+      but is also pin configurable if needed.
       Syntax is an approximate subset of regular native Serial. 
       Some miniSerial info:  https://github.com/BLavery/miniSerial
  - __miniOled__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display. 
       Optionally using I2C writes via SoftWire (allowing pin choice), or native I2C on PA9 PA10.
-      So now we can see some output. 
+      So now we can see some display output. 
       Derived out of Daniel Turton's OzOled project 2014/2015. 
-      To use software I2c, you need to also fetch and install other-party libraries SoftWire and AsyncDelay. 
+      To use the optional software I2C, you need to also fetch and install other-party libraries SoftWire and AsyncDelay. 
       Some miniOled info: https://github.com/BLavery/miniOled
 
 Quality = working, if not elegant. 
