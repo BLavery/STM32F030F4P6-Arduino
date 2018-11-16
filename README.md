@@ -38,6 +38,7 @@ with the F030F4. We can run a "Serial" on its uart header, and we can run an ole
 
  - __miniSerial__ - a simple software non-interrupt duplex serial driver, default/max 19200. 
       So now a terminal can be used. TXD/RXD ie PA9/PA10, ie at the correct uart header, but pin configurable if needed.
+      Syntax is an approximate subset of regular native Serial. 
       Some miniSerial info:  https://github.com/BLavery/miniSerial
  - __miniOled__ - a lean and basic driver for the ubiquitous '0.96" I2C SSD1306 Oled' display. 
       Optionally using I2C writes via SoftWire (allowing pin choice), or native I2C on PA9 PA10.
