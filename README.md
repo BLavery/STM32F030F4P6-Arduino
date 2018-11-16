@@ -51,7 +51,7 @@ with the F030F4. We can run a "Serial" on its uart header, we can run an oled di
 Quality = working, if not elegant. 
 Code size = comfortable in our tiny flash space.
 The library code is intentionally minimal - just enough to get the job done, of being able to "talk"
-to this board. 
+to this board, leaving code space still available for a modest sketch. 
 
 Other Libraries, needed for miniOled to run on pins other than PA9 PA10:
  - __SoftWire__ 2.0 from here: https://www.arduinolibraries.info/libraries/soft-wire
