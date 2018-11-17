@@ -8,7 +8,7 @@ unsigned long t0;
 
 void setup(void)
 {
-      Serial.begin(19200);
+      Serial.begin(9600);
       // Serial.begin(19200, PA2, PA3);
 	  pinMode(LED_BUILTIN, OUTPUT);
 	  delay(500);  // IDE's serial terminal may take a bit of wakeup time. Don't lose first chrs. 
