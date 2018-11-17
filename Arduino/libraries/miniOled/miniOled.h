@@ -30,6 +30,7 @@ public:
     void printChar(char c, byte X=255, byte Y=255);
     void printString(const char *String, byte X=255, byte Y=255, byte numChar=255);
     void printBigNumber(const char *number, byte column=0, byte page=0, byte numChar=255);
+    void printBigNumber(int i, byte X, byte Y);
     void printInt(int j, byte X=255, byte Y=255);
     void drawLine(int page, byte data);
     byte printNumber(long n, byte X=255, byte Y=255);
@@ -46,7 +47,8 @@ public:
 private:
     void sendCommand(byte command);
     void sendData(byte Data);
-    char ibuffer[60];
+    char ibuffer[60];  // for i2c
+    char buffer[20];  // for integer calc
 };
 
 extern OLED Oled;  // OLED object
