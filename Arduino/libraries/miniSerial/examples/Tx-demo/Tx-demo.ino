@@ -3,8 +3,8 @@
 
 
 void setup() {
-	Serial.begin();  // defaults to 19200, tx=PA9, rx=PA10
-	// Serial.begin(9600);   // other option
+	Serial.begin(9600);  // defaults to 19200, tx=PA9, rx=PA10
+	// Serial.begin();   // other option
 	// Serial.begin(19200, PA2, PA3);  // other option
 	delay(500);  // advise delay before serial output. Display wakeup reasons, not code reasons.
 #ifdef STM32F030x6  //this define is board ID
