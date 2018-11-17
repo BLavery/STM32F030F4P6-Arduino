@@ -15,17 +15,18 @@ void setup(){
 	Oled.wideFont = false;
 	Oled.chrSpace=1;
 	Oled.printString("Hello Brian",0,2); 
-	// Oled.printString("abcdefg",5,5); 
-	delay(5000);
+	delay(1000);
 	// Oled.clearDisplay();
-	// Oled.printBigNumber("7",0,0);
-
-	// Oled.printBigNumber("9",3,0);
-	Oled.printBigNumber("2",6,4);
+	Oled.printBigNumber("-31",6,4);
 	Oled.printBigNumber("9",12,0);
-	Oled.printBigNumber("8",9,4); 
-	Oled.printBigNumber("5",12,4); 
+//	delay(1000);
+//	Oled.printBigNumber("8",9,4); 
+//	Oled.printBigNumber("5",12,4);
+	delay(1000);
+	Oled.printBigNumber("   ", 6,4);  // clear those positions
+	Oled.printBigNumber(62, 6,4); 
 	//Oled.setPowerOff();
+
 
 }
 
