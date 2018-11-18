@@ -57,7 +57,8 @@ Other Libraries, needed for miniOled to run on pins other than PA9 PA10:
  - __SoftWire__ 2.0 from here: https://www.arduinolibraries.info/libraries/soft-wire
  - __AsyncDelay__ (used by SoftWire) from here: https://github.com/stevemarple/AsyncDelay
 
-(And incidentally, SoftWire should be equally useable with other I2C devices on the '030F4P6.)
+(And incidentally, SoftWire should be equally useable with other I2C libraries or devices on the '030F4P6.
+For example, there is an instruction note in libraries folder on adapting alternative ACROBOTIC oled library for SoftWire.)
 
 ## Installation:
 <img align="right" src="P1070121.JPG">
