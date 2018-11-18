@@ -13,7 +13,11 @@ In ACROBOTIC_SSD1306.cpp, add 2 lines near top:
 This configures it to use SoftWire instead of native Wire.
 
 
-In each example .ino file, you need 3 lines at top ...
+In each example .ino file, you need to replace ...
+
+	#include "Wire.h" 
+
+... at top with these 3 lines  ...
 
 	#include <SoftWire.h>
 	SoftWire Wire(PA6, PA5);  // your choice of SDA / SCL pins
