@@ -1,0 +1,27 @@
+Notes on getting ACROBOTIC SSD1306 library working on 'F030F4P6 with SoftWire I2C
+
+ACROBOTIC library is lightweight and is easily run on the 'F030F4P6,
+either with native Wire (Pins PA10, PA9), or with SoftWire for choice of SDA / SCL.
+
+Here is how to adapt to SoftWire:
+
+In ACROBOTIC_SSD1306.cpp, add 2 lines near top:
+
+	#include "SoftWire.h"
+	extern SoftWire Wire;
+	
+This configures it to use SoftWire instead of native Wire.
+
+
+In each example .ino file, you need 3 lines at top ...
+
+	#include <SoftWire.h>
+	SoftWire Wire(PA6, PA5);  // your choice of SDA / SCL pins
+	char ibuffer[60];
+
+... and add this inside top of setup():
+
+    Wire.setRxBuffer(ibuffer, 60);  
+    Wire.setTxBuffer(ibuffer, 60);
+
+B Lavery Nov 2018
