@@ -153,7 +153,5 @@ But the library files here (Installation part 3 above) will remain working and v
 
 The intention of this project here has been to get something up and running ASAP on this board. The board has been available "out there" now for a while. There will doubtless be in due course more elegant solutions to its limitations than the "mini" libraries above.  
 
-But on second thought:
-
-If it offends you to use simple workarounds for this chip's limited resources, then spend another $1 and buy a bluepill.
+But on second thought ... If it offends you to use simple workarounds for this chip's limited resources, then spend another $1 and buy a bluepill.
 
