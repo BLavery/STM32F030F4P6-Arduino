@@ -147,7 +147,7 @@ V. 0.3.0 13 Nov 2018
 
 The above code for IDE support is now (12 Nov) the same as this (Adminius) version: 
     https://github.com/stm32duino/Arduino_Core_STM32/tree/master/variants/DEMO_F030F4 
-(IE, Earlier version here has now been brought into line with forthcoming V1.5.) A couple of pin numberings have changed. 
+(IE, Earlier version that was here has now been brought into line with forthcoming V1.5.) A couple of pin numberings have changed. 
     
 The Installation parts 1 and 2 above will become obsolete/unnecessary here when 1.5 is released.
 But the library files here (Installation part 3 above) will remain working and valid. 
