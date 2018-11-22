@@ -36,7 +36,7 @@ And the native Serial software is too big.)
 There are some new very lightweight arduino libraries included here, so that we now **can** communicate 
 with the F030F4. We can run a "Serial" on its uart header, we can run an oled display, and we can use Wire/I2C on pins of our choice. These libraries (with example files) are:
 
- - __miniSerial__ - a simple software non-interrupt low-performance duplex serial driver, default/max 19200. 
+ - __miniSerial__ - a simple software non-interrupt low-performance duplex serial driver, max 19200. 
       So now a terminal can be used with your sketch. TXD/RXD ie PA9/PA10, ie at the correct uart header, 
       but is also pin configurable if needed.
       Syntax is an approximate subset of regular native Serial. 
