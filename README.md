@@ -15,10 +15,10 @@ In any case, the library modules in this project should still be valid on an off
 
 The USB micro connector is for 5V power only, not USB data. (The chip does not support USB!)
 
-The only practical programming method is STLink.
+The easiest practical programming method is STLink.
 **Get one** ($3). Check elsewhere if you need any config/setup help. 
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
-And with STLink, __no bootloader is used or needed__. (And that's a whole other hassle - and some precious flash space - out of the way!)
+__No bootloader is used or needed__. (And that's a whole other hassle out of the way!)
 
 And get a 3V TTL USB serial adapter (CP2102 and CH340 are 3V) while you are at it ($1.5). You are going to need that for "terminal."
 
