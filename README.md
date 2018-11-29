@@ -18,6 +18,7 @@ The USB micro connector is for 5V power only, not USB data. (The chip does not s
 The easiest practical programming method is STLink.
 **Get one** ($3). Check elsewhere if you need any config/setup help. 
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
+
 __No flash bootloader is used or needed__. (And that's a whole other hassle out of the way!)
 
 And get a 3V TTL USB serial adapter (CP2102 and CH340 are 3V) while you are at it ($1.5). You are going to need that for "terminal", at least.
