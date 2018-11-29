@@ -157,5 +157,5 @@ But the library files here (Installation part 3 above) will remain working and v
 
 The intention of this project here has been to get something up and running ASAP on this limited-capacity board. The board has been available "out there" now for a while. There will doubtless be in due course more elegant solutions to its limitations than the "mini" libraries above.  
 
-But on second thought ... If it offends you to use simple workarounds for this chip's limited resources, if you really need something that can load libraries and fit in more than some simple GPIO I/O, then spend another $1 and buy one of the various STM32F103C8T6 / bluepill boards with 4 times the flash.
+But on second thought ... If it offends you to use simple workarounds for this chip's limited flash space, if you really need something that can load libraries and fit in more than some simple GPIO I/O, then spend another $1 and buy one of the various STM32F103C8T6 / bluepill boards with 4 times the flash.
 
