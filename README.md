@@ -28,7 +28,7 @@ But, alternative to STLink, you __can__ use the (ROM-based and undestroyable) fa
 ## Libraries Included Here:
 
 <img align="right" src="P1070122.JPG">The F030F4 has only 16K of flash. Compiling the arduino IDE with an empty sketch will use about 8K. 
-However, including calls in your sketch to arduino's regular __Serial__ will also add __many K__ to the build size, abruptly passing the 16k limit. One Serial.println(int) and you've used 15.5k! Yes, that one-liner just works - on PA2/PA3 - but your sketch now has no code space left.
+However, including calls in your sketch to arduino's regular __Serial__ will also add __many K__ to the build size, abruptly passing the 16k limit. One Serial.println(int) and you've used 15.5k! Yes, that one-liner just works - on PA2/PA3, note this, not PA9/PA10 - but your sketch now has no code space left.
 
 And the __Wire__ pin assignments conflict with the uart header use, as built.
 
