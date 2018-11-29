@@ -23,7 +23,7 @@ __No flash bootloader is used or needed__. (And that's a whole other hassle out 
 
 And get a 3V TTL USB serial adapter (CP2102 and CH340 are 3V) while you are at it ($1.5). You are going to need that for "terminal", at least.
 
-But, alternative to STLink, you __can__ use the (ROM-based and undestroyable) factory flashing function using PA9/PA10 (ie TX/RX) and the serial adapter (TX-to-RX and RX-to-TX remember). Upload Method = "Serial". Press reset with boot0 jumper to 3V, flash with IDE, restore boot0 to GND, and your sketch should run.
+But, alternative to STLink, you __can__ use the (ROM-based and undestroyable) factory flashing function using PA9/PA10 (ie TX/RX) and the serial adapter (TX-to-RX and RX-to-TX remember). Upload Method = "Serial". Press reset with boot0 jumper to 3V, upload with IDE, restore boot0 to GND, and your sketch should run.
 
 ## Libraries Included Here:
 
