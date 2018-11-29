@@ -15,7 +15,7 @@ In any case, the library modules in this project should still be valid on an off
 
 The USB micro connector is for 5V power only, not USB data. (The chip does not support USB!)
 
-The easiest practical programming method is STLink.
+The easiest practical programming method is Upload Method = "STLink".
 **Get one** ($3). Check elsewhere if you need any config/setup help. 
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
 
@@ -23,7 +23,7 @@ __No flash bootloader is used or needed__. (And that's a whole other hassle out 
 
 And get a 3V TTL USB serial adapter (CP2102 and CH340 are 3V) while you are at it ($1.5). You are going to need that for "terminal", at least.
 
-Now, alternative to STLink, you __can__ use the (ROM-based and undestroyable) factory bootload function using PA9/PA10 (ie TX/RX) and the serial adapter (TX-to-RX and RX-to-TX remember!), after resetting with boot0 jumper to 3V. Restore boot0 to GND, and your sketch should run.
+Now, alternative to STLink, you __can__ use the (ROM-based and undestroyable) factory flashing function using PA9/PA10 (ie TX/RX) and the serial adapter (TX-to-RX and RX-to-TX remember!) Upload Method = "Serial". Press reset with boot0 jumper to 3V, flash with IDE, restore boot0 to GND, and your sketch should run.
 
 ## Libraries Included Here:
 
