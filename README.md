@@ -159,3 +159,6 @@ The intention of this project here has been to get something up and running ASAP
 
 But on second thought ... If it offends you to use simple workarounds for this chip's limited flash space, if you really need something that can load libraries and fit in more than some simple GPIO I/O, then spend another $1 and buy one of the various STM32F103C8T6 / bluepill boards with 4 times the flash.
 
+
+
+For my notes on the 'F103 "BluePill", see https://github.com/BLavery/STM32F103-Arduino
