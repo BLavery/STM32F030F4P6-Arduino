@@ -7,7 +7,7 @@ for getting the STM32F030F4P6 Cortex-M0 "Minimum System Dev" or "Demo" board
 up and running on __Arduino_Core_STM32__.  eBay and AliExpress are flooded with these boards for $2.  This may be a capable 32-bit chip at 48MHz, but it is the baby of the STM32 line because of limited flash memory.
 
 I expect that the STM32 official core project may shortly release 
-support for this chip, in which case then use the official version, of course.  
+support for this board, in which case then use the official version, of course.  
 
 In any case, the library modules in this project should still be valid on an official support version.
 
