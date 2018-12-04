@@ -74,7 +74,7 @@ For example, there is an instruction note in libraries folder on adapting altern
 but yours will be doubtless a bit different. Hunt for a bunch of "variant.h" files and then check
 you are indeed in the STM32 region. On my Windows install I found the files here:  C:\Users\Brian\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.4.0\
 
-a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, with its 5 files. (Now - 12 Nov - aligned with coming V1.5.)
+a. inside the .../1.4.0/variants/ folder, add the DEMO-F030F4 folder from here, with its 6 files. (Now - 12 Nov - aligned with coming V1.5.)
 
 b. in the .../1.4.0/ folder, open the existing boards.txt in an editor, and patch in the GenF030 "excerpt" section.
 
