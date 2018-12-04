@@ -6,7 +6,7 @@ THIS IS NOT AN OFFICIAL STM32/ARDUINO PROJECT
 for getting the STM32F030F4P6 Cortex-M0 "Minimum System Dev" or "Demo" board 
 up and running on Arduino IDE.  eBay and AliExpress are flooded with these for $2.  This may be a 32-bit chip at 48MHz, but it is the baby of the STM32 line.
 
-I expect that the STM arduino project may shortly release 
+I expect that the STM32 official core project may shortly release 
 support for this chip, in which case then use the official version, of course.  
 
 In any case, the library modules in this project should still be valid on an official support version.
