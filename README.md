@@ -16,7 +16,7 @@ In any case, the library modules in this project should still be valid on an off
 The USB micro connector is for 5V power only, not USB data. (The chip does not support USB!)
 
 The easiest practical programming method is Upload Method = "STLink".
-**Get one** ($3). Check elsewhere if you need any config/setup help. 
+**Get one** ($3). (On Windows, fetch STSW_Link009 from STM for the STlink driver. Otherwise, check elsewhere if you need any further config/setup help.) 
 Get it running for your scenario, and programming becomes trivially easy thereafter. Simply leave the BOOT0 jumper always on the GND side.
 
 __No flash bootloader is used or needed__. (And that's a whole other hassle out of the way!)
