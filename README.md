@@ -11,6 +11,10 @@ support for this board, in which case then use the official version, of course.
 
 In any case, the library modules in this project should still be valid on an official support version.
 
+### 2019 - This is no longer being maintained by the original author.
+### Please feel free to fork, copy, adapt if you find it useable
+### However, there is now official support.
+
 ## Programming?
 
 The USB micro connector is for 5V power only, not USB data. (The chip does not support USB!)
